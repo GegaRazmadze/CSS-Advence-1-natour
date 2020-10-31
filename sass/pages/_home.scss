@@ -18,11 +18,22 @@
  //trapeciis formistvis shegvidzlia gamoviyenot clip-path magram
  //aq gamoviyenebt transform: skewY; damxreli Y gerdzis mimart
  transform: skewY(-7deg);
- margin-top: -11rem;
+ margin-top: -10rem;
 
  //pirdapiri direct child selector & >
  & > * {
   transform: skewY(7deg);
  }
  //.section-features > * | - > - am nishnis gareshe marto - * - moinishneboda yvelaa child elementi, ise inishneba mxolod shemdegi
+}
+
+.section-tours {
+ background-color: $color-grey-light-1;
+ padding: 25rem 0 15rem 0;
+ margin-top: -10rem;
+}
+
+.section-stories {
+ position: relative;
+ padding: 15rem 0;
 }

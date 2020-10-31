@@ -36,6 +36,15 @@
    background-color: $color-white;
   }
  }
+
+ &--green {
+  background-color: $color-primary;
+  color: $color-white;
+
+  &::after {
+   background-color: $color-primary;
+  }
+ }
  /* psevdo elementi - vqmni da vdeb zustad buttonis msgavs element buttonis ukan */
  /* contetnt da display yoveltvis unda iyos chawerili */
  &::after {

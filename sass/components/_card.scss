@@ -1,0 +1,205 @@
+.card {
+ //FUNCTIONALITY
+
+ //xedi - perent elemetze iwereba
+ //gamoiyeneba roteitis dros kargi da aramoyanyale gamosaxulebistvis
+ //rac ufro dabalia value, mit ufro dramatulia pespective 150rem kargia
+ perspective: 150rem;
+ //axali prop aris da yvela browsers ar  aqvs wdoma amitom xelit shegvyavs
+ -moz-perspective: 150rem;
+
+ position: relative;
+
+ //childe elements vqmnit HTML shi da css pormats vwert child
+
+ //amitom pirdapir vadzlevt simagles. I -adgili | II qvevit.
+ height: 52rem;
+ &__side {
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  //floatidan amovardnis gamo elementi parant elementi kargavs height -s | position: absolute;
+  //floatis Shemtxvevashi vasworebs clearFix - it magram position - is dros ar gvaqvs egeti xelsawyo.
+  //amitom pirdapir vadzlevt simagles. II - adgili.
+  height: 52rem;
+  // anim. xarvezis gamosasworeblad
+  backface-visibility: hidden;
+
+  //img bug fixer
+  overflow: hidden;
+
+  &--front {
+   background-color: $color-white;
+  }
+
+  &--back {
+   transform: rotateY(180deg);
+
+   &-1 {
+    background-image: linear-gradient(
+     to right bottom,
+     $color-secondary-light,
+     $color-secondary-dark
+    );
+   }
+
+   &-2 {
+    background-image: linear-gradient(
+     to right bottom,
+     $color-primary-light,
+     $color-primary-dark
+    );
+   }
+
+   &-3 {
+    background-image: linear-gradient(
+     to right bottom,
+     $color-tertiary-light,
+     $color-tertiary-dark
+    );
+   }
+  }
+ }
+
+ //roca Card :hover __side - shemoatriale
+ &:hover &__side--front {
+  transform: rotateY(-180deg);
+ }
+ &:hover &__side--back {
+  transform: rotateY(0);
+ }
+
+ // Front Side Styling
+ &__picture {
+  background-size: cover;
+  height: 23rem;
+  // new prop
+  background-blend-mode: screen;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  //clip-path - ma overflow da border radiusi gaaqro amitom xelit unda davwerot:
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+
+  &--1 {
+   background-image: linear-gradient(
+     to right bottom,
+     $color-secondary-light,
+     $color-secondary-dark
+    ),
+    url(../img/nat-5.jpg);
+  }
+
+  &--2 {
+   background-image: linear-gradient(
+     to right bottom,
+     $color-primary-light,
+     $color-primary-dark
+    ),
+    url(../img/nat-6.jpg);
+  }
+
+  &--3 {
+   background-image: linear-gradient(
+     to right bottom,
+     $color-tertiary-light,
+     $color-tertiary-dark
+    ),
+    url(../img/nat-7.jpg);
+  }
+ }
+
+ &__heading {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: $color-white;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+  width: 75%;
+ }
+
+ &__heading-span {
+  //rom daetios width:75% vamatebt adgils
+  padding: 1rem 1.5rem;
+  //box-shi xazebis da textis adgilebis gasasworeblad :
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+
+  &--1 {
+   background-image: linear-gradient(
+    to right bottom,
+    rgba($color-secondary-light, 0.85),
+    rgba($color-secondary-dark, 0.85)
+   );
+  }
+
+  &--2 {
+   background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.85),
+    rgba($color-primary-dark, 0.85)
+   );
+  }
+
+  &--3 {
+   background-image: linear-gradient(
+    to right bottom,
+    rgba($color-tertiary-light, 0.85),
+    rgba($color-tertiary-dark, 0.85)
+   );
+  }
+ }
+ &__details {
+  ul {
+   //titqmis yoveltvis viyenebl ul -tan
+   list-style: none;
+   width: 80%;
+   //martivi xerxi box - is box- Shi centrshi gasworebistvis:
+   margin: 0 auto;
+
+   li {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+
+    &:not(:last-child) {
+     border-bottom: 1px solid $color-grey-light-2;
+    }
+   }
+  }
+ }
+
+ //Back Side Styling
+ &__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+ }
+
+ &__price-box {
+  text-align: center;
+  color: $color-white;
+  margin-bottom: 8rem;
+ }
+
+ &__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+ }
+
+ &__price-value {
+  font-size: 6rem;
+  //rodesac texti didia weight naklebs vwert rom lamazi iyos
+  font-weight: 100;
+ }
+}
