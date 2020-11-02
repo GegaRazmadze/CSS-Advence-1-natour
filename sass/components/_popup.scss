@@ -1,0 +1,103 @@
+.popup {
+ position: relative;
+ position: fixed;
+ height: 100vh;
+ width: 100%;
+ top: 0;
+ right: 0;
+ background-color: rgba($color-black, 0.9);
+ z-index: 5000;
+ //display: none; - tan rom shevdzlot animated
+ opacity: 0;
+ visibility: hidden;
+ transition: all 0.3s;
+
+ &__content {
+  //marto width sakmarisia chasasmelad
+  width: 75%;
+  @include centerHorizontallyVertically;
+  background-color: $color-white;
+  box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+  border-radius: $border-radius-small;
+  display: table;
+  overflow: hidden;
+  position: relative;
+
+  //animaciistvis:
+  opacity: 0;
+  transform: translate(-50%, -50%), scale(0.25);
+  transition: all 0.5s 0.2s;
+ }
+
+ //floatis nacvlad | imitom.rom gvinda orive box = height qondes viyenebt display: table/table-cell;
+ &__left {
+  width: 33.333333%;
+  display: table-cell;
+ }
+
+ &__right {
+  width: 66.666667%;
+  display: table-cell;
+  //table-cell prop. ujrebis gashualedebistvis:
+  vertical-align: middle;
+  padding: 3rem 5rem;
+ }
+
+ &__img {
+  display: block;
+  width: 100%;
+ }
+
+ &__text {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+
+  //colume layout -axalia CSS - shi da teqsts alagebs svetebad
+
+  -moz-column-count: 2;
+  -moz-column-gap: 4rem;
+  -moz-column-rule: 1px solid $color-grey-light-2;
+
+  column-count: 2;
+  column-gap: 4rem; //1em = 14px by default = font-size:1.4rem;
+  column-rule: 1px solid $color-grey-light-2; //shua xazi like - border.
+  //sityvis gadatana meore xazze -
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+ }
+
+ //<a href="#popup"/> it id="popup" ze gadasvla:
+ //Open States
+ &:target {
+  opacity: 1;
+  visibility: visible;
+ }
+
+ &:target &__content {
+  opacity: 1;
+  transform: translate(-50%, -50%), scale(1);
+ }
+
+ //popup - is daxurva ubralod <a/> targetis shecvlit moxdeba #section-tours
+ &__close {
+  &:link,
+  &:visited {
+   color: $color-grey-dark;
+   position: absolute;
+   top: 2.5rem;
+   right: 2.5rem;
+   font-size: 3rem;
+   text-decoration: none;
+   display: inline-block;
+   transition: all 0.2s;
+   //X - is boxsis simaglis gasasworeblad
+   line-height: 1;
+  }
+
+  &:hover {
+   color: $color-primary;
+  }
+ }
+}

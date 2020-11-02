@@ -12,7 +12,7 @@
   position: fixed;
   top: 6rem;
   right: 6rem;
-  border-radius: 50%;
+  border-radius: $border-radius-circle;
   z-index: 2000;
   cursor: pointer;
  }
@@ -20,7 +20,7 @@
  &__background {
   height: 6rem;
   width: 6rem;
-  border-radius: 50%;
+  border-radius: $border-radius-circle;
   position: fixed;
   top: 6.5rem;
   right: 6rem;
