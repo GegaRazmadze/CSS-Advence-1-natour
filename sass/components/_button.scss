@@ -1,4 +1,6 @@
 .btn {
+ &,
+// for <button> umatebt &, radgan <a> tag - isgan gansxvavebit buttuns ar aqvs psevdo klasebi
  &:link,
  &:visited {
   text-decoration: none;
@@ -11,6 +13,10 @@
 
   position: relative;
   font-size: $default-font-size;
+
+  //Change for the <button> element
+  border: none;
+  cursor: pointer;
  }
 
  &:hover {
@@ -23,7 +29,10 @@
   }
  }
 
- &:active {
+ &:active,
+ &:focus {
+  //<button> focus ar vshlit bolomde rom funqcia ar moeshalos amitov vwert aq:
+  outline: none;
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
  }
