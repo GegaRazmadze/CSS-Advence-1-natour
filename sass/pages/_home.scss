@@ -3,6 +3,10 @@
  padding: 25rem 0;
  // 95vh - 75vh
  margin-top: -20vh;
+
+ @include respond(tab-port) {
+  padding: 20rem 0;
+ }
 }
 
 .section-features {
@@ -25,17 +29,27 @@
   transform: skewY(7deg);
  }
  //.section-features > * | - > - am nishnis gareshe marto - * - moinishneboda yvelaa child elementi, ise inishneba mxolod shemdegi
+ @include respond(tab-port) {
+  padding: 10rem 0;
+ }
 }
 
 .section-tours {
  background-color: $color-grey-light-1;
  padding: 25rem 0 15rem 0;
  margin-top: -10rem;
+
+ @include respond(tab-port) {
+  padding: 20rem 0 10rem 0;
+ }
 }
 
 .section-stories {
  position: relative;
  padding: 15rem 0;
+ @include respond(tab-port) {
+  padding: 10rem 0;
+ }
 }
 
 .section-book {
@@ -45,6 +59,9 @@
   $color-primary-light,
   $color-primary-dark
  );
+ @include respond(tab-port) {
+  padding: 10rem 0;
+ }
 }
 
 .book {
@@ -57,14 +74,40 @@
   ),
   url(../img/nat-10.jpg);
  //bg-size : cover; igivera rac bg-size: 100% :
- background-size: 100%;
+ background-size: 100%; //ocuping all width;
  border-radius: $border-radius-small;
  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
 
- height: 50rem;
+ @include respond(tab-land) {
+  background-image: linear-gradient(
+    105deg,
+    rgba($color-white, 0.85) 0%,
+    rgba($color-white, 0.85) 65%,
+    transparent 65%
+   ),
+   url(../img/nat-10.jpg);
+  background-size: cover;
+ }
+
+ @include respond(phone) {
+  background-image: linear-gradient(
+    105deg,
+    rgba($color-white, 0.85) 0%,
+    rgba($color-white, 0.85) 100%
+   ),
+   url(../img/nat-10.jpg);
+ }
 
  &__form {
   width: 50%;
   padding: 6rem;
+
+  @include respond(tab-land) {
+   width: 65%;
+  }
+
+  @include respond(phone) {
+   width: 100%;
+  }
  }
 }
