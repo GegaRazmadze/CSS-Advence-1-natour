@@ -113,7 +113,27 @@
      </div>
      <div class="col-1-of-2">
       <div class="composition">
-       <img
+<!-- IMG - opti.  II - <img - shi utiteb suratis zomas, rom browsers qondes wvdoma magalitad 300w w - px + sizes="" / ramdens vw , % ekranisas ikavebs Img;:-->
+<img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" alt="#"
+sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+alt="photo 1"
+class="composition__photo composition__photo--p1"
+src="img/nat-1-large.jpg">
+
+<img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" alt="#"
+sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+alt="photo 2"
+class="composition__photo composition__photo--p2"
+src="img/nat-2-large.jpg">
+
+<img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" alt="#"
+sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+alt="photo 3"
+class="composition__photo composition__photo--p3"
+src="img/nat-3-large.jpg">
+
+
+       <!-- <img
         src="img/nat-1-large.jpg"
         alt="photo 1"
         class="composition__photo composition__photo--p1"
@@ -127,7 +147,7 @@
         src="img/nat-3-large.jpg"
         alt="photo 3"
         class="composition__photo composition__photo--p3"
-       />
+       /> -->
       </div>
      </div>
     </div>
@@ -323,7 +343,13 @@
     <div class="story">
 <!-- mrgvali surati titristvis viyenebr Figure - romelis gvadzlevs caption - is sashvaleba -->
       <figure class="story__shape">
-<img class="story__img" src="img/nat-8.jpg" alt="#">
+
+<picture class="story__img">
+<source srcset="img/nat-8-min.jpg 1x, img/nat-8.jpg 2x" media="(max-width: 56.25em)">
+  <img srcset="img/nat-8-min.jpg 1x, img/nat-8.jpg 2x" class="story__img" alt="#" src="img/nat-8.jpg">
+</picture>
+
+<!-- <img class="story__img" src="img/nat-8.jpg" alt="#"> -->
       <figcaption class="story__caption">Mary Smith</figcaption>
       </figure>
       <div class="story__text">
@@ -337,7 +363,13 @@
     <div class="story">
 <!-- mrgvali surati titristvis viyenebr Figure - romelis gvadzlevs caption - is sashvaleba -->
       <figure class="story__shape">
-<img class="story__img" src="img/nat-9.jpg" alt="#">
+
+<picture >
+<source srcset="img/nat-9-min.jpg 1x, img/nat-9.jpg 2x" media="(max-width: 56.25em)">
+  <img srcset="img/nat-9-min.jpg 1x, img/nat-8.jpg 2x" class="story__img" alt="#" src="img/nat-9.jpg">
+</picture>
+
+<!-- <img class="story__img" src="img/nat-9.jpg" alt="#"> -->
       <figcaption class="story__caption">Jack Wilson</figcaption>
       </figure>
       <div class="story__text">
@@ -403,7 +435,14 @@
 
  <footer class="footer">
  <div class="footer__logo-box">
-    <img src="img/logo-green-2x.png" alt="" class="footer__logo">
+<!-- Art Direction - + Density -->
+<picture class="footer-logo">
+<source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+  <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="#" src="img/logo-green-2x.png">
+</picture>
+
+   <!-- responsive IMG Density Switching - srcset:"... 1x, ... 2x" -->
+    <!-- <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="#" class="footer__logo"> -->
  </div>
  <div class="row">
    <div class="col-1-of-2">
@@ -433,9 +472,18 @@
    <div class="popup__content">
      
     <div class="popup__left">
-      <img src="img/nat-8.jpg" alt="#" class="popup__img">
-      <img src="img/nat-9.jpg" alt="#" class="popup__img">
+
+          <picture>
+          <source srcset="#none" media="(max-width: 56.25em)">
+            <img srcset="img/nat-8.jpg" alt="#" class="popup__img" src="img/nat-8.jpg ">
+          <source srcset="#none" media="(max-width: 56.25em)">
+            <img srcset="img/nat-9.jpg" alt="#" class="popup__img" src="img/nat-9.jpg">
+          </picture>
+
+      <!-- <img src="img/nat-8.jpg" alt="#" class="popup__img">
+      <img src="img/nat-9.jpg" alt="#" class="popup__img"> -->
     </div>
+   
     <div class="popup__right">
           <!-- popup - is daxurva ubralod <a/> targetis shecvlit -->
           <a href="#section-tours" class="popup__close">&times;</a>

@@ -46,15 +46,15 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 // 1em = 16px
 @mixin respond($breakpoint) {
  @if $breakpoint == phone {
-  //600px
-  @media (max-width: 37.5em) {
+  //600px + 1px
+  @media (max-width: 37.5625em) {
    @content;
   }
  }
 
  @if $breakpoint == tab-port {
-  //900px
-  @media (max-width: 56.25em) {
+  //900px +1px
+  @media (max-width: 56.3125em) {
    @content;
   }
  }
