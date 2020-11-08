@@ -91,18 +91,7 @@
      $color-secondary-light,
      $color-secondary-dark
     ),
-    url(../img/nat-5-min.jpg);
-
-   //resolution @media - (min/max-resolution:) - i dpi - dotes peare inch
-   @media (min-resolution: 192dpi) and (min-width: 37.5625em),
-    (min-width: 125em) {
-    background-image: linear-gradient(
-      to right bottom,
-      $color-secondary-light,
-      $color-secondary-dark
-     ),
-     url(../img/nat-5.jpg);
-   }
+    url(../img/nat-5.jpg);
   }
 
   &--2 {
@@ -111,18 +100,7 @@
      $color-primary-light,
      $color-primary-dark
     ),
-    url(../img/nat-6-min.jpg);
-
-   //resolution @media - (min/max-resolution:) - i dpi - dotes peare inch
-   @media (min-resolution: 192dpi) and (min-width: 37.5625em),
-    (min-width: 125em) {
-    background-image: linear-gradient(
-      to right bottom,
-      $color-primary-light,
-      $color-primary-dark
-     ),
-     url(../img/nat-6.jpg);
-   }
+    url(../img/nat-6.jpg);
   }
 
   &--3 {
@@ -131,18 +109,7 @@
      $color-tertiary-light,
      $color-tertiary-dark
     ),
-    url(../img/nat-7-min.jpg);
-
-   //resolution @media - (min/max-resolution:) - i dpi - dotes peare inch
-   @media (min-resolution: 192dpi) and (min-width: 37.5625em),
-    (min-width: 125em) {
-    background-image: linear-gradient(
-      to right bottom,
-      $color-tertiary-light,
-      $color-tertiary-dark
-     ),
-     url(../img/nat-7.jpg);
-   }
+    url(../img/nat-7.jpg);
   }
  }
 
@@ -237,7 +204,9 @@
  }
 
  //touch - ze  ar aris :hover - i amitom mtlianad Cardis redaqtireba gviwevs
- @include respond(tab-port) {
+ //  @include respond(tab-port)
+ //da roca hoveri ar shegidzlia:
+ @media only screen and (max-width: 56.3125em), only screen and (hover: none) {
   //FUNCTIONALITY
   height: auto;
   border-radius: $border-radius-small;

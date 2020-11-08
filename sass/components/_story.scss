@@ -29,10 +29,8 @@
   float: left;
   //gareta monaxazi aris rogorc poligon - iviT  circyle - teqsti sadac lagdeba|| sadac content is floating
   //rom imushaus element unda iyos float - i / width/ height
-  -webkit-shape-outside: circle(50% at 50% 50%);
-  shape-outside: circle(50% at 50% 50%);
-  -webkit-clip-path: circle(50% at 50% 50%);
-  clip-path: circle(50% at 50% 50%);
+
+  border-radius: 50%;
 
   //adgilistvis im elementebistvis romelic float - mdgomareobashia ar viyenebT margins da a.sh.
   //vxmarobt transforms : translated()!! :
@@ -40,6 +38,14 @@
   //2 transform - sxvadasxva adgilas ver vwerd da amitom gvchirdeba gameoreba
   position: relative;
   overflow: hidden;
+
+  @supports ((clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0))) {
+   border-radius: none;
+   //gareta monaxazi aris rogorc poligon - iviT  circyle - teqsti sadac lagdeba|| sadac content is floating
+   //rom imushaus element unda iyos float - i / width/ height
+   -webkit-clip-path: circle(50% at 50% 50%);
+   clip-path: circle(50% at 50% 50%);
+  }
 
   @include respond(phone) {
    transform: translateX(-3rem) skewX(0);

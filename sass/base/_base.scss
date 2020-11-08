@@ -36,3 +36,9 @@ body {
   padding: 0;
  }
 }
+
+//rodesac teqst vnishnavt mausit ese gamochndeba:
+::selection {
+ background-color: $color-primary;
+ color: $color-white;
+}

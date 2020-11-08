@@ -53,15 +53,22 @@ body {
  text-transform: uppercase;
  font-weight: 700;
  display: inline-block;
- background-image: linear-gradient(
-  to right,
-  $color-primary-light,
-  $color-primary-dark
- );
- //backgroundis textze misamsagreblad:
- -webkit-background-clip: text;
- //textis gamchvirvalobistvis ukana foni rom gamochndes
- color: transparent;
+ background-color: $color-primary;
+
+ @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  background-image: linear-gradient(
+   to right,
+   $color-primary-light,
+   $color-primary-dark
+  );
+
+  //backgroundis textze misamsagreblad:
+  -webkit-background-clip: text;
+  background-clip: text;
+  //textis gamchvirvalobistvis ukana foni rom gamochndes
+  color: transparent;
+ }
+
  letter-spacing: 0.2rem;
  transition: all, 0.2s;
 

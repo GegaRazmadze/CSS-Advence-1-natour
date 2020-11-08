@@ -21,6 +21,7 @@
 
  //resolution @media - (min/max-resolution:) - i dpi - dotes peare inch
  @media (min-resolution: 192dpi) and (min-width: 37.5625em),
+  (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5625em),
   (min-width: 125em) {
   background-image: linear-gradient(
     to right bottom,
@@ -112,6 +113,7 @@
 
  //resolution @media - (min/max-resolution:) - i dpi - dotes peare inch
  @media (min-resolution: 192dpi) and (min-width: 37.5625em),
+  (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5625em),
   (min-width: 125em) {
   background-image: linear-gradient(
     105deg,
